@@ -1,0 +1,99 @@
+$color-gray: #cecece;
+$color-gray-clear: #ececec;
+$color-blue-dark: #32324e;
+$color-blue-dark-hover: #44446d;
+$color-blue-clear: #159edc;
+$color-white: #fff;
+$color-black: #000;
+
+.menu {
+    width: 20%;
+    position: absolute;
+    height: calc(100% - 70px );
+
+    @media ( max-width: 1290px ) {
+        height: 100%;
+    }
+
+    &:before {
+        content:"";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 20%;
+        height: 100%;
+        background-color: $color-blue-dark;
+    }
+
+    &__box {
+        background-color: $color-blue-dark;
+        height: 100%;
+    }
+    &__list {
+        border-bottom: 1px solid $color-blue-clear;
+        padding: 27px 20px;
+        cursor: pointer;
+        position: relative;
+
+        .fa-angle-double-right {
+            position: absolute;
+            right: 22px;
+            top: calc( 50% - 5px );
+            color: $color-blue-clear;
+            opacity: 0;
+        }
+
+        &.active-link {
+
+            &:before {
+                content: "";
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 10px 17.6px 10px 0;
+                border-color: transparent  $color-gray transparent transparent;
+                position: absolute;
+                right: 0;
+                top: calc( 50% - 9px);
+            }
+
+            background-color: $color-blue-dark-hover;
+
+            &:hover {
+                .fa-angle-double-right {
+                    opacity: 0;
+                }
+            }
+        }
+
+        &:hover {
+
+            .fa-angle-double-right {
+                opacity: 1;
+            }
+        }
+
+        &:hover {
+            background-color: $color-blue-dark-hover;
+        }
+    }
+    &__link {
+        color: $color-white;
+        text-decoration: none;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+
+        &-legend {
+            font-size: 0.9rem;
+        }
+
+        .fas {
+            margin-right: 20px;
+            font-size: 1.5rem;
+        }
+    }
+}

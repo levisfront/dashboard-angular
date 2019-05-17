@@ -1,0 +1,62 @@
+$color-gray: #cecece;
+$color-blue-dark: #32324e;
+$color-blue-clear: #159edc;
+$color-white: #fff;
+$color-black: #000;
+
+.header {
+    height: 70px;
+    background-color: $color-white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+    position: relative;
+    z-index: 1;
+
+    &__search {
+        height: 100%;
+        width: 19.8%;
+        border-right: 1px solid $color-gray; 
+        overflow: hidden;
+        position: relative;
+    }
+    &__input {
+        width: 80%;
+        height: 100%;
+        padding: 0;
+        border: none;
+        outline: none;
+        padding-right: 20%;
+        text-align: right;
+    }
+    &__icon {
+        position: absolute;
+        right: 6%;
+        top: calc( 50% - 13px);
+        color: $color-gray;
+        font-size: 24px;
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+
+    &__user {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    &__brand {
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
+                margin-left: 20px;
+    }
+}

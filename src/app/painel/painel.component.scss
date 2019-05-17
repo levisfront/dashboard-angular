@@ -1,0 +1,39 @@
+$color-gray: #cecece;
+$color-gray-clear: #ececec;
+$color-blue-dark: #32324e;
+$color-blue-dark-hover: #44446d;
+$color-blue-clear: #159edc;
+$color-white: #fff;
+$color-black: #000;
+
+.painel {
+
+    .form__select {
+        margin-right: 0; 
+    }
+
+    &__box {
+        width: 100%;
+        padding: 0 30px;
+    }
+    &__list {
+        height: 50px;
+        border-bottom: 1px solid $color-gray-clear;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &:last-child {
+            border: none;
+        }
+        .paragraph-primary {
+            margin: 0;
+        }
+        .form__select {
+            font-size: 0.8rem;
+            padding: 8px 20px;
+            height: auto;
+            width: 100px;
+        }
+    }
+}
